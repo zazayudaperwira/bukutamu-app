@@ -16,9 +16,17 @@ class CreateGuestbookTable extends Migration
         Schema::create('guestbooks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('address');
+            $table->string('instansi');
+            $table->integer('jumlah');
+            $table->string ('tujuan');
+            $table->string ('keperluan');
             $table->string('email');
+            $table->boolean('status')->default(0)->nullable();
+            $table->time('jamkeluar')->nullable();
             $table->text('phone');
-            $table->text('message');
+            $table->string('sign');
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }
