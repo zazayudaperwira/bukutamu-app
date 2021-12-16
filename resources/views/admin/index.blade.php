@@ -28,7 +28,10 @@
             <h1>Dashboard</h1>
             <!-- barchart -->
             <div class="mt-4">
-                <div id="bcbarangrusak"></div>
+                <div id="barchart1"></div>
+            </div>
+            <div class="mt-4">
+                <div id="barchart2"></div>
             </div>
             <!-- barchart end -->
         </div>
@@ -291,25 +294,33 @@
 
 <!-- Barchart -->
 <script>
-    Highcharts.chart('bcbarangrusak', {
+    Highcharts.chart('barchart1', {
         chart: {
             type: 'column'
         },
         title: {
-            text: 'Jumlah Pengunjung Per Fungsi'
+            text: 'Jumlah Pengunjung Tahun ' +
+            <?php 
+                echo \Carbon\Carbon::now()->format('Y');
+            ?>
         },
         subtitle: {
-            text: 'Berdasarkan Fungsi/Bagian'
+            text: 'Berdasarkan Bulan'
         },
         xAxis: {
             categories: [
-                'Umum',
-                'Nerwilis',
-                'IPDS',
-                'Sosial',
-                'Distribusi',
-                'Produksi',
-                'PST'
+                'Januari',
+                'Febuari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
             ],
             crosshair: true
         },
@@ -334,8 +345,69 @@
             }
         },
         series: [{
-            name: 'Fungsi',
-            data: [6, 12, 5, 3, 8, 15, 24]
+            name: 'Bulan',
+            data: [
+                <?php 
+                    for($i=1;$i<=12;$i++){
+                        echo "$barchart[$i],";
+                    } 
+                ?>
+            ]
+
+        }]
+    });
+</script>
+
+<script>
+    Highcharts.chart('barchart2', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Jumlah Pengunjung per Hari'
+        },
+        subtitle: {
+            text: 'Berdasarkan Hari'
+        },
+        xAxis: {
+            categories: [
+                'Senin',
+                'Selasa',
+                'Rabu',
+                'Kamis',
+                'Jumat',
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Banyak'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Hari',
+            data: [
+                <?php 
+                    for($i=0;$i<=4;$i++){
+                        echo "$barchart1[$i],";
+                    } 
+                ?>
+            ]
 
         }]
     });
