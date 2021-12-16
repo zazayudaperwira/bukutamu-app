@@ -8,6 +8,7 @@ use App\Models\Guestbook;
 use App\Models\Kepuasan;
 use Auth;
 use Session;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -19,10 +20,25 @@ class AdminController extends Controller
 
     public function defaultAdmin()
     {
+        $month = Carbon::now()->format('m');
+        $year  = Carbon::now()->format('Y');
+
+        $barchart = [];
+        for($i=1; $i<=12; $i++){
+            $barchart[$i] = Guestbook::whereMonth('created_at',$i)->whereYear('created_at',$year)->count();
+        }
+
+        $barchart1 = [];
+        for($i=0; $i<=4; $i++){
+            $barchart1[$i] = Guestbook::whereRaw('WEEKDAY(created_at)='.$i)->whereMonth('created_at',$month)->whereYear('created_at',$year)->count();
+        }
+
         return view('admin.index', [
             'gb_users' => User::all(),
             'gb_guestbooks' => Guestbook::all(),
-            'gb_kepuasans' => Kepuasan::all()
+            'gb_kepuasans' => Kepuasan::all(),
+            'barchart' => $barchart,
+            'barchart1' => $barchart1,
         ]);
     }
 
