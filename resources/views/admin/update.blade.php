@@ -1,12 +1,14 @@
 @extends('preload.default')
 
+@section('title', 'Administrator')
+
 @section('container')
     <div class="row d-flex justify-content-center">
-        <div class="col-md-8 bg-dark">
+        <div class="col-md-8 bg-light">
+            <div class="mt-5"> SPACE </div>
+            <h2 class="text-primary mt-3 mb-3"> Update {{ $d }} </h2>
 
-            <h2 class="text-primary mt-3 mb-3"> Editing {{ $d }} </h2>
-
-            <div class="container w-50 text-light">
+            <div class="container w-50 text-dark mb-4">
 
 {{--                Users--}}
 
@@ -18,7 +20,7 @@
                         <input type="hidden" name="d" value="{{ request('d') }}">
 
                         <div class="form-group mb-5">
-                            <label for="name"> Name </label>
+                            <label for="name"> Nama </label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ DB::table('users')->where('id', '=', request('update') )->value('name') }}">
                         </div>
 
@@ -28,7 +30,7 @@
                         </div>
 
                         <div class="form-group mb-5">
-                            <label for="email" > Email Address </label>
+                            <label for="email" > Alamat Email </label>
                             <input type="email" name="email" id="email" class="form-control" value="{{ DB::table('users')->where('id', '=', request('update') )->value('email') }}">
                         </div>
 
@@ -53,22 +55,74 @@
                         <input type="hidden" name="d" value="{{ request('d') }}">
 
                         <div class="form-group mb-5">
-                            <label for="name"> Name </label>
+                            <label for="name"> Nama </label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('name') }}">
                         </div>
 
                         <div class="form-group mb-5">
-                            <label for="email" > Email Address </label>
-                            <input type="email" name="email" id="email" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('email') }}">
+                            <label for="address"> Alamat </label>
+                            <input type="text" name="address" id="address" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('address') }}">
                         </div>
 
                         <div class="form-group mb-5">
-                            <label for="phone"> Phone Number </label>
+                            <label for="instansi"> Instansi </label>
+                            <input type="text" name="instansi" id="instansi" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('instansi') }}">
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="jumlah"> Jumlah </label>
+                            <input type="number" name="jumlah" id="jumlah" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('jumlah') }}">
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="guest_tujuan" >  Tujuan</label>
+                            <select  class="form-control" name="tujuan" id="guest_tujuan"  >
+                            <option selected >{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('tujuan') }}</option>
+                            <option value="Keperluan bertemu Kepala BPS Provinsi">Keperluan bertemu Kepala BPS Provinsi</option>
+                            <option value="Pelayanan Statistik Terpadu">Pelayanan Statistik Terpadu (Mencari Data, dan Konsultasi data)</option>
+                            <option value="Keperluan berkaitan Statistik Neraca">Keperluan berkaitan Statistik Neraca</option>
+                            <option value="Keperluan berkaitan Statistik Produksi">Keperluan berkaitan Statistik Produksi</option>
+                            <option value="Keperluan berkaitan Statistik Distribusi">Keperluan berkaitan Statistik Distribusi</option>
+                            <option value="Keperluan berkaitan Statistik Sosial">Keperluan berkaitan Statistik Sosial</option>
+                            <option value="Keperluan berkaitan Statistik Neraca">Keperluan berkaitan Statistik Neraca</option>
+                            <option value="Keperluan berkaitan Bagian Umum">Keperluan berkaitan Bagian Umum</option>
+                            <option value="Keperluan berkaitan Bagian Umum">Lainnya</option> 
+                        </select> 
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="guest_status" >  Status</label>
+                            <select  class="form-control" name="status" id="guest_status"  >
+                            <option selected >{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('status') }}</option>
+                            <option value="0" >Masih di Kantor</option>
+                            <option value="1">Sudah Keluar dari Kantor</option>
+                        </select> 
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="keperluan"> Keperluan </label>
+                            <input type="text" name="keperluan" id="keperluan" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('keperluan') }}">
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="phone"> No. Hp </label>
                             <input type="text" name="phone" id="phone" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('phone') }}">
                         </div>
 
                         <div class="form-group mb-5">
-                            <label for="message"> Message </label>
+                            <label for="email" > Alamat Email </label>
+                            <input type="email" name="email" id="email" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('email') }}">
+                        </div>
+                        
+
+
+                        <div class="form-group mb-5">
+                            <label for="jamkeluar" > Jam Keluar </label>
+                            <input type="time" name="jamkeluar" id="jamkeluar" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('jamkeluar') }}">
+                        </div>
+
+                        <div class="form-group mb-5">
+                            <label for="message"> Keterangan </label>
                             <input type="text" name="message" id="message" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('message') }}">
                         </div>
 
@@ -78,44 +132,6 @@
                     </form>
                 @endif
 
-{{--                Medias--}}
-
-                @if( request('d') == 'medias')
-                    <form action="/update" method="post">
-                        @csrf
-
-                        <input type="hidden" name="update" value="{{ request('update') }}">
-                        <input type="hidden" name="d" value="{{ request('d') }}">
-
-                        <table class="table table-bordered table-light table-striped table-sm">
-                            <tr>
-                                <th>Category IDs</th>
-                                <th>Category Name</th>
-                            </tr>
-
-                            @foreach(DB::table('categories')->get() as $keys)
-                            <tr>
-                                <td>{{ $keys->id }}</td>
-                                <td>{{ $keys->media_category_name }}</td>
-                            </tr>
-                            @endforeach
-                        </table>
-
-                        <div class="form-group mb-5">
-                            <label for="category_id" > Category ID </label>
-                            <input type="number" name="category_id" id="category_id" class="form-control" value="{{ DB::table('medias')->where('id', '=', request('update') )->value('category_id') }}">
-                        </div>
-
-                        <div class="form-group mb-5">
-                            <label for="media_title"> Title </label>
-                            <input type="text" name="media_title" id="media_title" class="form-control" value="{{ DB::table('medias')->where('id', '=', request('update') )->value('media_title') }}">
-                        </div>
-
-                        <div class="form-group mb-5">
-                            <button type="submit" name="inputSubmit" value="submit" class="btn btn-outline-primary"> Submit </button>
-                        </div>
-                    </form>
-                @endif
 
             </div>
         </div>

@@ -7,8 +7,8 @@ use App\Models\User;
 
 class MessageController extends Controller
 {
-    public function defaultMessage()
-    {
-        return view('message.index', ['title' => 'Messaging App']);
-    }
+    // public function defaultMessage()
+    // {
+    //     return view('message.index', ['title' => 'Messaging App']);
+    // }
 }

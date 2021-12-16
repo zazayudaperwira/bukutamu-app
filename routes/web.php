@@ -4,8 +4,10 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\GuestController;
+use App\Http\Controllers\KepuasanController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TamuController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Medias;
 use App\Models\Category;
@@ -22,6 +24,8 @@ use App\Models\User;
 |
 */
 
+Auth::routes();
+
 
 Route::get('/', function () {
     return view('index', [
@@ -33,8 +37,17 @@ Route::get('/messaging', [MessageController::class, 'defaultMessage']);
 
 Route::get('/guestbook', [GuestController::class, 'defaultGuest']);
 Route::post('/guestbook', [GuestController::class, 'send']);
+// Route::post('/guestbook', [GuestController::class, 'upload']);
+
+Route::get('/', [KepuasanController::class, 'defaultKepuasan']);
+Route::post('/', [KepuasanController::class, 'send']);
 
 Route::get('/admin', [AdminController::class, 'defaultAdmin']);
+Route::get('/tamu', [TamuController::class, 'defaultTamu']);
+
+//Route for Logout
+Route::get('/logout');
+
 
 //TODO get verification from session
 Route::get('/delete', [AdminController::class, 'defaultAdmin']);
@@ -42,6 +55,10 @@ Route::post('/delete', [AdminController::class, 'delete']);
 
 Route::get('/update', [AdminController::class, 'defaultUpdate']);
 Route::post('/update', [AdminController::class, 'update']);
+
+Route::get('/tamu/update', [KepuasanController::class, 'defaultKepuasan']);
+Route::get('/tamu/update', [TamuController::class, 'defaultUpdate']);
+Route::post('/tamu/update', [TamuController::class, 'update']);
 
 Route::get('media/', [MediaController::class, "defaultMedia"]);
 
@@ -59,3 +76,5 @@ Route::get('/tag', function () {
         'tag' => Category::all()
     ]);
 });
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

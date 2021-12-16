@@ -29,6 +29,6 @@ class RegisterController extends Controller
 
         $request->session()->flash('success', 'Your account has been registered. Please login.');
         
-        return redirect('/login');
+        return redirect('/admin?d=register');
     }
 }
