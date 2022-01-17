@@ -21,12 +21,15 @@ class CreateGuestbookTable extends Migration
             $table->integer('jumlah');
             $table->string ('tujuan');
             $table->string ('keperluan');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->boolean('status')->default(0)->nullable();
+            $table->time('jammasuk')->nullable();
             $table->time('jamkeluar')->nullable();
             $table->text('phone');
             $table->string('sign');
             $table->text('message')->nullable();
+            $table->string('kep')->nullable();
+            $table->text('feedback1')->nullable();
             $table->timestamps();
         });
     }

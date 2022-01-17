@@ -19,7 +19,16 @@ class GuestController extends Controller
 
     public function send(Request $request)
     {
-        // $folderPath =storage_path('/app/public');
+        
+        //Untuk di run di Android
+        // $folderPath = public_path('/images/ttd/ttd1');
+        // $image_parts = explode(";base64,", $request->signed);
+        // $image_type_aux = explode("image/", $image_parts[0]);
+        // $image_base64 = base64_decode($image_parts[0]);
+        // $file = $folderPath . uniqid() . '.png';
+        // file_put_contents($file,$image_base64);
+      
+        // Untuk Di run Di PC
         $folderPath = public_path('/images/ttd/ttd1');
         $image_parts = explode(";base64,", $request->signed);
         $image_type_aux = explode("image/", $image_parts[0]);
@@ -35,10 +44,12 @@ class GuestController extends Controller
             'jumlah' => ['required'],
             'tujuan' => ['required', 'max:255'],
             'keperluan' => ['required', 'max:255'],
-            'email' => ['max:255', 'email:dns'],
+            'email' => ['max:255'],
+            'jammasuk' => ['nullable', 'max:255'],
             'jamkeluar' => ['nullable', 'max:255'],
             'phone' => ['required', 'max:255', 'min:2'],
             'sign' => ['required'],
+            
         ]);
 
         Guestbook::create([
@@ -48,6 +59,7 @@ class GuestController extends Controller
             'tujuan' => $request->tujuan,
             'jumlah' => $request->jumlah,
             'keperluan' => $request->keperluan,
+            'jammasuk' => $request->jammasuk,
             'jamkeluar' => $request->jamkeluar,
             'email' => $request->email,
             'phone' => $request->phone,

@@ -30,6 +30,17 @@
                 </div>
 
                 <div class="form-group mb-5">
+                    <label for="role"> Tujuan</label>
+                    <select class="form-control" name="role" id="role">
+                        <option selected>{{ DB::table('users')->where('id', '=', request('update') )->value('role') }}</option>
+                            <option value="1">IPDS</option>
+                            <option value="2">Admin</option>
+                            <option value="3">Supervisor</option>
+                            <option value="4">User</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-5">
                     <label for="email"> Alamat Email </label>
                     <input type="email" name="email" id="email" class="form-control" value="{{ DB::table('users')->where('id', '=', request('update') )->value('email') }}">
                 </div>
@@ -78,15 +89,14 @@
                     <label for="guest_tujuan"> Tujuan</label>
                     <select class="form-control" name="tujuan" id="guest_tujuan">
                         <option selected>{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('tujuan') }}</option>
-                        <option value="Keperluan bertemu Kepala BPS Provinsi">Keperluan bertemu Kepala BPS Provinsi</option>
-                        <option value="Pelayanan Statistik Terpadu">Pelayanan Statistik Terpadu (Mencari Data, dan Konsultasi data)</option>
-                        <option value="Keperluan berkaitan Statistik Neraca">Keperluan berkaitan Statistik Neraca</option>
-                        <option value="Keperluan berkaitan Statistik Produksi">Keperluan berkaitan Statistik Produksi</option>
-                        <option value="Keperluan berkaitan Statistik Distribusi">Keperluan berkaitan Statistik Distribusi</option>
-                        <option value="Keperluan berkaitan Statistik Sosial">Keperluan berkaitan Statistik Sosial</option>
-                        <option value="Keperluan berkaitan Statistik Neraca">Keperluan berkaitan Statistik Neraca</option>
-                        <option value="Keperluan berkaitan Bagian Umum">Keperluan berkaitan Bagian Umum</option>
-                        <option value="Keperluan berkaitan Bagian Umum">Lainnya</option>
+                            <option value="Keperluan bertemu Kepala BPS Provinsi">Kepala BPS Provinsi</option>
+                            <option value="Bagian Umum">Bagian Umum</option>
+                            <option value="Fungsi Statistik Sosial">Fungsi Statistik Sosial</option>
+                            <option value="Fungsi Statistik Produksi">Fungsi Statistik Produksi</option>
+                            <option value="Fungsi Statistik Distribusi">Fungsi Statistik Distribusi</option>
+                            <option value="Fungsi Neraca Wilayah dan Analisis Statistik">Fungsi Neraca Wilayah dan Analisis Statistik</option>
+                            <option value="Fungsi Integrasi Pengolahan dan Diseminasi Statistik">Fungsi Integrasi Pengolahan dan Diseminasi Statistik</option>
+                            <option value="Lainnya">Lainnya</option>
                     </select>
                 </div>
 
@@ -96,6 +106,7 @@
                         <option selected>{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('status') }}</option>
                         <option value="0">Masih di Kantor</option>
                         <option value="1">Sudah Keluar dari Kantor</option>
+                        <option value="2">Checkout Otomatis</option>
                     </select>
                 </div>
 
@@ -111,7 +122,7 @@
 
                 <div class="form-group mb-5">
                     <label for="email"> Alamat Email </label>
-                    <input type="email" name="email" id="email" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('email') }}">
+                    <input type="text" name="email" id="email" class="form-control" value="{{ DB::table('guestbooks')->where('id', '=', request('update') )->value('email') }}">
                 </div>
 
 

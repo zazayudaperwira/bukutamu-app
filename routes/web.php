@@ -36,6 +36,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/update', [AdminController::class, 'update']);
 
     Route::post('/register', [AdminController::class, 'store']);
+
+    Route::get('/admin/checkoutall', [AdminController::class, 'defaultCheckout']);
+    Route::post('/admin/checkoutall', [AdminController::class, 'autocheckout']);
 });
 
 Route::middleware(['guest'])->group(function () {

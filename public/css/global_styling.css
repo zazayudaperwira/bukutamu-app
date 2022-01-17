@@ -1,4 +1,4 @@
-@yield('styling');
+@yield ('styling');
 
 @media (max-width: 768px) {
     .navbar-brand {

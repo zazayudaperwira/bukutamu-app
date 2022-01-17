@@ -14,6 +14,8 @@
 </section>
 
 <div class="row ">
+    <div class=col-3> </div>
+    <div class=col-6> 
     <div class="container rounded w-50 mt-5 bg-white" style="margin-bottom: 15vw">
         <form action="{{ route('login') }}" method="post" class="p-3">
             @csrf
@@ -43,6 +45,7 @@
 
             <button class="w-30 mt-2 btn btn-lg btn-primary" name="inputLogin" value="inputLogin" type="submit">login</button>
         </form>
-    </div>
+    </div></div>
+    <div class=col-3> </div>
 </div>
 @endsection

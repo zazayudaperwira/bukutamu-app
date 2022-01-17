@@ -51,6 +51,8 @@
 
 <div class="container bg-white text-dark">
   <h1> Buku Tamu </h1>
+
+  
   <h2> BPS Provinsi Lampung </h2>
   <div class=row>
     <div class=col-1></div>
@@ -67,9 +69,9 @@
 
         <div class=col-4>
           <a href="/guestbook" class="text-decoration-none text-white">
-            <p class="text-dark"> <b>Silahkan Mengisi Buku Tamu </b> </p>
+            <p class="text-dark"> <b>Silahkan Mengisi</b> </p>
             <div class="card me-2 mt-2 bg-primary">
-              <img src="images/img_2.jpg" class="card-img-top img-fluid">
+              <img src="images/skep1.png" class="card-img-top img-fluid">
               <div class="card-body">
                 <h5 class="card-title">Buku Tamu</h5>
               </div>
@@ -77,12 +79,11 @@
           </a>
         </div>
 
-        {{-- SURVEY KEPUASAN DIRECT TO CHECKOUT --}}
         <div class=col-4>
-          <a href="" class="text-decoration-none text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <p class="text-dark"> <b>Silahkan Mengisi Survei Kepuasan</b> </p>
+          <a href="/tamu?d=guestbooks" class="text-decoration-none text-white">
+            <p class="text-dark"> <b>Silahkan Mengisi</b> </p>
             <div class="card me-2 mt-2 bg-primary">
-              <img src="images/img_2.jpg" class="card-img-top img-fluid">
+              <img src="images/skep.png" class="card-img-top img-fluid">
               <div class="card-body">
                 <h5 class="card-title">Survei Kepuasan</h5>
               </div>
@@ -90,8 +91,21 @@
           </a>
         </div>
 
+        {{-- SURVEY KEPUASAN DIRECT TO CHECKOUT --}}
+        {{-- <div class=col-4>
+          <a href="" class="text-decoration-none text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <p class="text-dark"> <b>Silahkan Mengisi </b> </p>
+            <div class="card me-2 mt-2 bg-primary">
+              <img src="images/skep.png" class="card-img-top img-fluid">
+              <div class="card-body">
+                <h5 class="card-title">Survei Kepuasan</h5>
+              </div>
+            </div>
+          </a>
+        </div> --}}
+
         <!-- modal survei kepuasan -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
 
@@ -106,14 +120,14 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="/tamu">
+                <a href="/tamu?d=guestbooks">
                   <button type="submit" class="btn btn-primary"> Checkout</button>
                 </a>
               </div>
 
             </div>
           </div>
-        </div>
+        </div> --}}
         <!-- modal survei kepuasan end -->
 
         <div class=col-2></div>
@@ -151,5 +165,24 @@
   $('#myModal').on('shown.bs.modal', function() {
     $('#myInput').trigger('focus')
   })
+</script>
+
+
+<script>
+var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+var alertTrigger = document.getElementById('liveAlertBtn')
+
+function alert(message, type) {
+  var wrapper = document.createElement('div')
+  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+
+  alertPlaceholder.append(wrapper)
+}
+
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', function () {
+    alert('Nice, you triggered this alert message!', 'success')
+  })
+}
 </script>
 @endsection

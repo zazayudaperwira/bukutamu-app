@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
     <div class="container px-5">
         <a class="navbar-brand" href="{{ url('/') }}">
-            SIKuMu
+            Buku Tamu BPS Provinsi Lampung
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigationCenter" aria-controls="navigationCenter" aria-expanded="false" aria-label="Navbar on smol">

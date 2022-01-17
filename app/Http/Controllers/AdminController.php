@@ -32,13 +32,32 @@ class AdminController extends Controller
         for($i=0; $i<=4; $i++){
             $barchart1[$i] = Guestbook::whereRaw('WEEKDAY(created_at)='.$i)->whereMonth('created_at',$month)->whereYear('created_at',$year)->count();
         }
+        
+        $rate = Guestbook::avg('kep');
+        
+        // $diff = Carbon::parse(Guestbook::get('created_at'))->diffInHours(Carbon::parse(Guestbook::get('jamkeluar')));
+        $ntamu = count(Guestbook::where('status',1)->get('jammasuk'));
 
+        $diff = 0;
+        for( $i=0; $i<=$ntamu; $i++){
+            $cc = Guestbook::where('status',1)->skip($i)->take(1)->select('jammasuk')->value('jammasuk');
+            $gg = Guestbook::where('status',1)->skip($i)->take(1)->select('jamkeluar')->value('jamkeluar');
+            $diff = (strtotime($gg)-strtotime($cc))/60 + $diff;
+        }
+        $diffjam = ($diff/60)/$ntamu;
+        $diffmenit = ($diff%60)/$ntamu;
+
+        // $diff = $go - $come;
         return view('admin.index', [
             'gb_users' => User::all(),
             'gb_guestbooks' => Guestbook::all(),
             'gb_kepuasans' => Kepuasan::all(),
             'barchart' => $barchart,
             'barchart1' => $barchart1,
+            'rate' => round($rate,1),
+            'diffjam' => floor($diffjam),
+            'diffmenit' => round($diffmenit),
+            'ntamu' => $ntamu
         ]);
     }
 
@@ -75,9 +94,9 @@ class AdminController extends Controller
 
             switch ($request->d) {
                 case ('users'):
-                    $validatedData = $request->only('name', 'username', 'email');
+                    $validatedData = $request->only('name', 'username', 'role', 'email');
 
-                    User::where('id', $id)->update(['name' => $request->name, 'username' => $request->username, 'email' => $request->email]);
+                    User::where('id', $id)->update(['name' => $request->name, 'username' => $request->username,'role' => $request->role, 'email' => $request->email]);
                     return redirect('/admin?d=' . $request->d . '');
                     
                 case ('guestbooks'):
@@ -96,6 +115,7 @@ class AdminController extends Controller
         $validatedData = $request->validate([
             'name' => ['required', 'max:255'],
             'username' => ['required', 'max:255', 'unique:users'],
+            'role'  => ['required'],
             'email' => ['required', 'email:dns'],
             'password' => ['required', 'min: 3', 'max: 255'] 
         ]);
@@ -108,4 +128,20 @@ class AdminController extends Controller
         
         return redirect('/admin?d=register');
     }
+
+    public function defaultCheckout(Request $request)
+    {
+        return view('admin.checkoutall');
+    }
+
+
+    public function autocheckout(Request $request)
+{
+        $validatedData = $request->only('jamkeluar', 'status',  'message');
+        Guestbook::where('status',0)->update(['jamkeluar' => "16:00", 'status' => 2, 'message' => "Auto Checkout"]);
+        return redirect('/admin?d=guestbooks');
 }
+}
+
+
+

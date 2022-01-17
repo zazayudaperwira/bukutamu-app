@@ -29,6 +29,27 @@
             @enderror
         </div>
 
+                    <div class="form-floating mb-5 text-dark">
+                        <input type="text" class="form-control @error('role') is-invalid @enderror" name="role" id="inputRole" placeholder="My name is..." value="{{ old('role') }}">
+                        <label for="inputRole">role</label>
+
+                        @error('role')
+                        <div class="invalsid-feedback">
+                            Please provide your role
+                        </div>
+                        @enderror
+                    </div>
+                    
+        {{-- <div class="form-floating mb-5 text-dark">
+        <label for="inputRole">Email Address</label>
+        <select class="form-control" name="role" id="inputRole" required>
+            <option selected>Pilih Role ...</option>
+            <option value="1">Supervisor</option>
+            <option value="2">Admin</option>
+            <option value="3">User</option>
+        </select>
+        </div> --}}
+
         <div class="form-floating mb-5 text-dark">
             <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="inputEmail" placeholder="My name is..." value="{{ old('email') }}">
             <label for="inputEmail">Email Address</label>

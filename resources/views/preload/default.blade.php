@@ -19,7 +19,8 @@
 
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{ URL('css/global_styling.css') }}">
-    @yield('styling')
+  <link rel="stylesheet" type="text/css" href="css/global_styling.css">
+  @yield('styling')
 
     <!-- Title -->
     <title>@yield('title') | BPS Lampung</title>

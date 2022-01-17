@@ -34,14 +34,12 @@ class TamuController extends Controller
 
     public function update(Request $request)
     {
-        $data = $request->validate([
-            'tingkatkepuasan' => ['required', 'max:255'],
-            'feedback' => ['nullable', 'min:1'],
-        ]);
+        // $data = $request->validate([
+        //     'tingkatkepuasan' => ['required', 'max:255'],
+        //     'feedback' => ['nullable', 'min:1'],
+        // ]);
 
-        Kepuasan::create($data);
-
-        $request->session()->flash('sent', 'Terima kasih telah mengisi Survey Kepuasan, Kami akan selalu berusaha meningkatkan pelayanan di BPS Provinsi Lampung');
+        // Kepuasan::create($data);
 
         if ($request->has(['update', 'd'])) {
             $id = $request->update;
@@ -53,15 +51,16 @@ class TamuController extends Controller
                     User::where('id', $id)->update(['name' => $request->name, 'username' => $request->username, 'email' => $request->email]);
                     return redirect('/admin?d=' . $request->d . '');
                 case ('guestbooks'):
-                    $validatedData = $request->only('jamkeluar', 'status');
+                    $validatedData = $request->only('jamkeluar', 'status','kep', 'feedback1');
 
-                    Guestbook::where('id', $id)->update(['jamkeluar' => date("H:i:s"), 'status' => 1]);
+                    Guestbook::where('id', $id)->update([ 'kep'=> $request->kep, 'feedback1' => $request->feedback1, 'jamkeluar' => date("H:i:s"), 'status' => 1]);
+                    $request->session()->flash('sent', 'Terima kasih telah mengisi Survey Kepuasan, Kami akan selalu berusaha meningkatkan pelayanan di BPS Provinsi Lampung');
                     return redirect('/');
             }
         } else {
             return redirect()->back();
         }
-        
+       
         return redirect('/');
     }
 }
