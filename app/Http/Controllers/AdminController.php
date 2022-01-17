@@ -37,7 +37,10 @@ class AdminController extends Controller
         
         // $diff = Carbon::parse(Guestbook::get('created_at'))->diffInHours(Carbon::parse(Guestbook::get('jamkeluar')));
         $ntamu = count(Guestbook::where('status',1)->get('jammasuk'));
-
+        if ($ntamu == 0) {
+            $diffjam = 0;
+            $diffmenit = 0; 
+        } else {
         $diff = 0;
         for( $i=0; $i<=$ntamu; $i++){
             $cc = Guestbook::where('status',1)->skip($i)->take(1)->select('jammasuk')->value('jammasuk');
@@ -46,7 +49,7 @@ class AdminController extends Controller
         }
         $diffjam = ($diff/60)/$ntamu;
         $diffmenit = ($diff%60)/$ntamu;
-
+        }
         // $diff = $go - $come;
         return view('admin.index', [
             'gb_users' => User::all(),
