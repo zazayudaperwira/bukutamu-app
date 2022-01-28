@@ -18,10 +18,10 @@
 <div class="row mt-5">
     <div class="col-3"></div>
     <div class="col-6 btn-group " role="group" aria-label="Basic mixed styles example">
-        <a href="/admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
-        <a href="/admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
-        <a href="/admin?d=users" role="button" class="btn btn-success bg-succes "> Users </a>
-        <a href="/admin?d=register" role="button" class="btn btn-success bg-primary"> Register </a>
+        <a href="admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
+        <a href="admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
+        <a href="admin?d=users" role="button" class="btn btn-success bg-succes "> Users </a>
+        <a href="admin?d=register" role="button" class="btn btn-success bg-primary"> Register </a>
     </div>
     <div class="col-3"></div>
 </div>
@@ -235,18 +235,18 @@
             {{-- Filter Bulan --}}
             <div class="col-3"></div>
             <div class="col-6 btn-group mb-2 " role="group" aria-label="Basic mixed styles example">
-                <a href="/admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
-                <a href="/admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
-                <a href="/admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
-                <a href="/admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
-                <a href="/admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
-                <a href="/admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
-                <a href="/admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
-                <a href="/admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
-                <a href="/admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
-                <a href="/admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
-                <a href="/admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
-                <a href="/admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
+                <a href="admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
+                <a href="admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
+                <a href="admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
+                <a href="admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
+                <a href="admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
+                <a href="admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
+                <a href="admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
+                <a href="admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
+                <a href="admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
+                <a href="admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
+                <a href="admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
+                <a href="admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
             </div>
             <div class="col-3"></div>
 
@@ -378,9 +378,9 @@
 <div class="row mt-5">
     <div class="col-3"></div>
     <div class="col-6 btn-group " role="group" aria-label="Basic mixed styles example">
-        <a href="/admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
-        <a href="/admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
-        <a href="/admin?d=users" role="button" class="btn btn-success bg-succes "> Users </a>
+        <a href="admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
+        <a href="admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
+        <a href="admin?d=users" role="button" class="btn btn-success bg-succes "> Users </a>
   </div>
     <div class="col-3"></div>
 </div>
@@ -524,18 +524,18 @@
             {{-- Filter Bulan --}}
             <div class="col-3"></div>
             <div class="col-6 btn-group mb-2 " role="group" aria-label="Basic mixed styles example">
-                <a href="/admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
-                <a href="/admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
-                <a href="/admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
-                <a href="/admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
-                <a href="/admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
-                <a href="/admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
-                <a href="/admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
-                <a href="/admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
-                <a href="/admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
-                <a href="/admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
-                <a href="/admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
-                <a href="/admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
+                <a href="admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
+                <a href="admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
+                <a href="admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
+                <a href="admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
+                <a href="admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
+                <a href="admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
+                <a href="admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
+                <a href="admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
+                <a href="admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
+                <a href="admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
+                <a href="admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
+                <a href="admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
             </div>
             <div class="col-3"></div>
 
@@ -663,8 +663,8 @@
 <div class="row mt-5">
     <div class="col-3"></div>
     <div class="col-6 btn-group " role="group" aria-label="Basic mixed styles example">
-        <a href="/admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
-        <a href="/admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
+        <a href="admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
+        <a href="admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
      </div>
     <div class="col-3"></div>
 </div>
@@ -736,18 +736,18 @@
             {{-- Filter Bulan --}}
             <div class="col-3"></div>
             <div class="col-6 btn-group mb-2 " role="group" aria-label="Basic mixed styles example">
-                <a href="/admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
-                <a href="/admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
-                <a href="/admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
-                <a href="/admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
-                <a href="/admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
-                <a href="/admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
-                <a href="/admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
-                <a href="/admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
-                <a href="/admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
-                <a href="/admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
-                <a href="/admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
-                <a href="/admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
+                <a href="admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
+                <a href="admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
+                <a href="admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
+                <a href="admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
+                <a href="admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
+                <a href="admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
+                <a href="admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
+                <a href="admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
+                <a href="admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
+                <a href="admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
+                <a href="admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
+                <a href="admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
             </div>
             <div class="col-3"></div>
 
@@ -872,8 +872,8 @@
 <div class="row mt-5">
     <div class="col-3"></div>
     <div class="col-6 btn-group " role="group" aria-label="Basic mixed styles example">
-        <a href="/admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
-        <a href="/admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
+        <a href="admin?d=dashboard" role="button" class="btn btn-success bg-primary"> Dashboard </a>
+        <a href="admin?d=guestbooks" role="button" class="btn btn-success bg-warning"> Guestbooks </a>
      </div>
     <div class="col-3"></div>
 </div>
@@ -936,18 +936,18 @@
             {{-- Filter Bulan --}}
             <div class="col-3"></div>
             <div class="col-6 btn-group mb-2 " role="group" aria-label="Basic mixed styles example">
-                <a href="/admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
-                <a href="/admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
-                <a href="/admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
-                <a href="/admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
-                <a href="/admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
-                <a href="/admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
-                <a href="/admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
-                <a href="/admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
-                <a href="/admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
-                <a href="/admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
-                <a href="/admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
-                <a href="/admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
+                <a href="admin?d=guestbooks&b=01" role="button" class="btn btn-success bg-secondary"> jan </a>
+                <a href="admin?d=guestbooks&b=02" role="button" class="btn btn-success bg-secondary"> feb </a>
+                <a href="admin?d=guestbooks&b=03" role="button" class="btn btn-success bg-secondary "> mar </a>
+                <a href="admin?d=guestbooks&b=04" role="button" class="btn btn-success bg-secondary"> apr </a>
+                <a href="admin?d=guestbooks&b=05" role="button" class="btn btn-success bg-secondary"> mar </a>
+                <a href="admin?d=guestbooks&b=06" role="button" class="btn btn-success bg-secondary"> jun </a>
+                <a href="admin?d=guestbooks&b=07" role="button" class="btn btn-success bg-secondary "> jul </a>
+                <a href="admin?d=guestbooks&b=08" role="button" class="btn btn-success bg-secondary"> aug </a>
+                <a href="admin?d=guestbooks&b=09" role="button" class="btn btn-success bg-secondary"> sep </a>
+                <a href="admin?d=guestbooks&b=10" role="button" class="btn btn-success bg-secondary"> oct </a>
+                <a href="admin?d=guestbooks&b=11" role="button" class="btn btn-success bg-secondary"> nov </a>
+                <a href="admin?d=guestbooks&b=12" role="button" class="btn btn-success bg-secondary">des</a>
             </div>
             <div class="col-3"></div>
 
