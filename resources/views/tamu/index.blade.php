@@ -3,6 +3,7 @@
 @section('title', 'Daftar Tamu')
 
 @section('container-fluid')
+
 <section class="jumbotron text-center bg-#5bc0de">
     <img src="images/bps.png" alt="Badan Pusat statistik" width="200" />
     <h1 class="display-4 pt-1">Buku Tamu</h1>
@@ -11,6 +12,8 @@
         <path fill="#ffffff" fill-opacity="1" d="M0,128L30,133.3C60,139,120,149,180,170.7C240,192,300,224,360,234.7C420,245,480,235,540,202.7C600,171,660,117,720,85.3C780,53,840,43,900,37.3C960,32,1020,32,1080,42.7C1140,53,1200,75,1260,80C1320,85,1380,75,1410,69.3L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
     </svg>
 </section>
+
+
 
 <div class="m-3">
     @if (session()->has('sent'))
@@ -48,7 +51,7 @@
                     <td> {{ $data->keperluan }} </td>
                     <td> {{ $data->created_at }} </td>
                     <td>
-                        <form action="/tamu/update" method="get">
+                        <form action="tamu/update" method="get">
                             @csrf
 
                             <input type="hidden" name="update" value="{{$data->id}}">

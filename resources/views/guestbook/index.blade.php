@@ -3,7 +3,6 @@
 @section('title', 'Guestbook Page')
 
 @section('styling')
-
 <style>
     .kbw-signature {
         width: 100%;
@@ -50,9 +49,7 @@
     .jumbotron {
     padding-top: 6rem;
     background-color: #e2edff;
-
-    
-}
+    }
 </style>
 @endsection
 
@@ -87,7 +84,7 @@
         @endif
 
         <div class="container mt-5 align-left">
-            <form class="needs-validation" action="/guestbook" method="post">
+            <form class="needs-validation" action="guestbook" method="post">
                 @csrf
 
                 <div class="form-group row">

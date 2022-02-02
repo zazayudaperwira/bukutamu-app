@@ -13,7 +13,7 @@
            
 
             {{-- Guestbooks --}}
-            <form action="/admin/checkoutall" method="post">
+            <form action="checkoutall" method="post">
                 @csrf
                 <input type="hidden" name="status" id="status" class="form-control" value="2">
                 <input type="hidden" name="jamkeluar" id="jamkeluar" class="form-control" value="{{ date("H:i") }}">

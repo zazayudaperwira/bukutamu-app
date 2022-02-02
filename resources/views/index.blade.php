@@ -68,7 +68,7 @@
         <div class=col-2></div>
 
         <div class=col-4>
-          <a href="/guestbook" class="text-decoration-none text-white">
+          <a href="guestbook" class="text-decoration-none text-white">
             <p class="text-dark"> <b>Silahkan Mengisi</b> </p>
             <div class="card me-2 mt-2 bg-primary">
               <img src="images/skep1.png" class="card-img-top img-fluid">
@@ -80,7 +80,7 @@
         </div>
 
         <div class=col-4>
-          <a href="/tamu?d=guestbooks" class="text-decoration-none text-white">
+          <a href="tamu?d=guestbooks" class="text-decoration-none text-white">
             <p class="text-dark"> <b>Silahkan Mengisi</b> </p>
             <div class="card me-2 mt-2 bg-primary">
               <img src="images/skep.png" class="card-img-top img-fluid">

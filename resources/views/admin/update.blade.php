@@ -3,6 +3,7 @@
 @section('title', 'Administrator')
 
 @section('container-fluid')
+
 <div class="row d-flex justify-content-center">
     <div class="col-md-8 bg-light">
         <div class="mt-5"> SPACE </div>
@@ -13,7 +14,7 @@
             {{-- Users --}}
 
             @if( request('d') == 'users')
-            <form action="/update" method="post">
+            <form action="update" method="post">
                 @csrf
 
                 <input type="hidden" name="update" value="{{ request('update') }}">
@@ -30,7 +31,7 @@
                 </div>
 
                 <div class="form-group mb-5">
-                    <label for="role"> Tujuan</label>
+                    <label for="role"> Role</label>
                     <select class="form-control" name="role" id="role">
                         <option selected>{{ DB::table('users')->where('id', '=', request('update') )->value('role') }}</option>
                             <option value="1">IPDS</option>
@@ -59,7 +60,7 @@
             {{-- Guestbooks --}}
 
             @if( request('d') == 'guestbooks')
-            <form action="/update" method="post">
+            <form action="update" method="post">
                 @csrf
 
                 <input type="hidden" name="update" value="{{ request('update') }}">

@@ -100,13 +100,13 @@ class AdminController extends Controller
                     $validatedData = $request->only('name', 'username', 'role', 'email');
 
                     User::where('id', $id)->update(['name' => $request->name, 'username' => $request->username,'role' => $request->role, 'email' => $request->email]);
-                    return redirect('/admin?d=' . $request->d . '');
+                    return redirect('admin?d=' . $request->d . '');
                     
                 case ('guestbooks'):
                     $validatedData = $request->only('name', 'address', 'instansi', 'tujuan', 'keperluan', 'status', 'jamkeluar', 'email', 'phone', 'message');
 
                     Guestbook::where('id', $id)->update(['name' => $request->name, 'status' => $request->status, 'address' => $request->address, 'instansi' => $request->instansi, 'tujuan' => $request->tujuan, 'keperluan' => $request->keperluan,  'jamkeluar' => $request->jamkeluar, 'email' => $request->email, 'phone' => $request->phone, 'message' => $request->message]);
-                    return redirect('/admin?d=' . $request->d . '');
+                    return redirect('admin?d=' . $request->d . '');
             }
         }else{
             return redirect()->back();

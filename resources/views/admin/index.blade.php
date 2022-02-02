@@ -192,7 +192,7 @@
 
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="/delete" method="post">
+                                                <form action="delete" method="post">
                                                     @csrf
                                                     <input type="hidden" name="delete" value="{{$data->id}}">
                                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -204,7 +204,7 @@
                                 </div>
                                 <!-- modal delete end -->
 
-                                <form action="/update" method="get">
+                                <form action="update" method="get">
                                     @csrf
                                     <input type="hidden" name="update" value="{{$data->id}}">
                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -225,7 +225,7 @@
         <div class="d-flex justify-content-end mt-2">
         {{-- Modal Checkout All --}}
 
-                    <a href="/admin/checkoutall">
+                    <a href="admin/checkoutall">
                         <button type="submit" class="btn btn-danger"> Checkout</button>
                     </a>
         {{-- Modal Checkout All --}}
@@ -337,7 +337,7 @@
 
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="/delete" method="post">
+                                                <form action="delete" method="post">
                                                     @csrf
                                                     <input type="hidden" name="delete" value="{{$data->id}}">
                                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -350,7 +350,7 @@
                                 <!-- modal delete end -->
 
                                 <!-- button update -->
-                                <form action="/update" method="get">
+                                <form action="update" method="get">
                                     @csrf
                                     <input type="hidden" name="update" value="{{$data->id}}">
                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -480,7 +480,7 @@
 
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="/delete" method="post">
+                                                <form action="delete" method="post">
                                                     @csrf
                                                     <input type="hidden" name="delete" value="{{$data->id}}">
                                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -492,7 +492,7 @@
                                 </div>
                                 <!-- modal delete end -->
 
-                                <form action="/update" method="get">
+                                <form action="update" method="get">
                                     @csrf
                                     <input type="hidden" name="update" value="{{$data->id}}">
                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -513,7 +513,7 @@
         <div class="d-flex justify-content-end mt-2">
         {{-- Modal Checkout All --}}
 
-                    <a href="/admin/checkoutall">
+                    <a href="admin/checkoutall">
                         <button type="submit" class="btn btn-danger"> Checkout</button>
                     </a>
         {{-- Modal Checkout All --}}
@@ -624,7 +624,7 @@
 
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="/delete" method="post">
+                                                <form action="delete" method="post">
                                                     @csrf
                                                     <input type="hidden" name="delete" value="{{$data->id}}">
                                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -637,7 +637,7 @@
                                 <!-- modal delete end -->
 
                                 <!-- button update -->
-                                <form action="/update" method="get">
+                                <form action="update" method="get">
                                     @csrf
                                     <input type="hidden" name="update" value="{{$data->id}}">
                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -725,7 +725,7 @@
         <div class="d-flex justify-content-end mt-2">
         {{-- Modal Checkout All --}}
 
-                    <a href="/admin/checkoutall">
+                    <a href="admin/checkoutall">
                         <button type="submit" class="btn btn-danger"> Checkout</button>
                     </a>
         {{-- Modal Checkout All --}}
@@ -833,7 +833,7 @@
 
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <form action="/delete" method="post">
+                                                <form action="delete" method="post">
                                                     @csrf
                                                     <input type="hidden" name="delete" value="{{$data->id}}">
                                                     <input type="hidden" name="d" value="{{ request('d') }}">
@@ -846,7 +846,7 @@
                                 <!-- modal delete end -->
 
                                 <!-- button update -->
-                                <form action="/update" method="get">
+                                <form action="update" method="get">
                                     @csrf
                                     <input type="hidden" name="update" value="{{$data->id}}">
                                     <input type="hidden" name="d" value="{{ request('d') }}">

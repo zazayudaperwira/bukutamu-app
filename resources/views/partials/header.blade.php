@@ -13,15 +13,15 @@
             <ul class="navbar-nav me-auto">
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('guestbook') ? 'active' : '' }}" href="/guestbook">Buku Tamu</a>
+                    <a class="nav-link {{ Request::is('guestbook') ? 'active' : '' }}" href="guestbook">Buku Tamu</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('tamu') ? 'active' : '' }}" href="/tamu?d=guestbooks">Tamu</a>
+                    <a class="nav-link {{ Request::is('tamu') ? 'active' : '' }}" href="tamu?d=guestbooks">Tamu</a>
                 </li>
                 @endguest
             </ul>
